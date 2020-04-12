@@ -1,0 +1,318 @@
+/*Utility Class*/
+
+.hide
+{
+    display: none;
+}
+
+/* General rules - scales images, videos to size of container */
+img, embed, object, video {
+  max-width: 100%; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/*Fix for scaling of images IE*/
+img {
+  -ms-interpolation-mode: bicubic; }
+
+
+/*General Rules for Elements*/
+
+body
+{
+    font-family: 'Futura Std', Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+a 
+{ 
+  color:#000; 
+  text-decoration: none; 
+  outline:0; 
+  transition:all .1s linear 0s;
+}
+
+h2, h3
+{
+    font-family: 'OpenSans', Helvetica, Arial, sans-serif;
+    color: #1B3116;
+    font-weight: bolder;
+}
+
+p{
+    font-family: 'Gotu', Helvetica, Arial, sans-serif;
+    color: #6A819B;
+}
+
+.button a{
+    font-family: Segoe Script;
+    color: red;
+    font-size: 22px;
+}
+
+
+.slide{
+    width: 100vw;
+    height: 100vh;
+    background: #F6F6F6;
+}
+/*MOBILE SLIDE*/
+.slide{
+    display: grid;
+    grid-template-columns: 5% minmax(100px, 600px) 5%;
+    grid-template-rows: 5% minmax(500px, 1000px) 5% minmax(500px, 1000px) 5%;
+    overflow-x: hidden;
+}
+.art_img_wrapper{
+    grid-column:2;
+    grid-row:4/5;
+    /* background: url("../img/image1.png"); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 5%;
+    padding-bottom: 20%;
+}
+.watercolor_background{
+    grid-column:2;
+    grid-row:1/5;
+    background: url("../img/splash.png");
+    background-position: center;
+    background-size: cover;
+}
+.bottles{
+    display: none;
+    position: absolute;
+}
+.article{
+    grid-column:2;
+    grid-row:2/3;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    padding: 5%;
+    /* z-index: 999; */
+}
+.article h2{
+    font-size: 30px;
+    text-transform: uppercase; 
+    letter-spacing: 3px;
+}
+.article p{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+/******/
+.info-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#info-container p{
+    font-size: 30px;
+    color: rgb(22, 14, 134);
+    line-height: 40px;
+    font-family: Forte;
+}
+.info-text{
+    width: 420px;
+    font-size: 20px;
+    line-height: 40px;
+    padding-top: 5%;
+}
+.info-container h3{
+    font-weight: bolder;
+}
+.info-text h4{
+    color: rgb(43,137,6);
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 18px;
+    font-family: Gotu;
+}
+.info-img{
+    /* width: 420px; */
+    /* height: 200px; */
+    background-color: brown;
+    /* margin: 30px 0; */
+}
+#form-container{
+    /* grid-column: 2/3; */
+    /* grid-row: 4/5; */
+    /* width: 80%; */
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: column;
+    /* width: 600px; */
+    /* justify-self: center; */
+    /* align-self: center; */
+    font-family: MuseoSans;
+    /* padding-bottom: 30px; */
+}
+
+#form-container .form{
+    position: relative;
+    height: 50px;
+    /* width: 80%; */
+    overflow: hidden;
+    /* margin: 5% 0% 0 0; */
+    /* padding: 2px; */
+}
+
+#form-container .form input{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    color: rgb(43,137,6);
+    background-color: rgb(246, 246, 246);
+    padding-top: 18px;
+    padding-left: 2px;
+    border:none;
+    outline: none;
+}
+#form-container .form label{
+    position: absolute;
+    bottom: 0%;
+    left:0%;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    pointer-events: none;
+    border-bottom: 3px solid #868fcd;
+    color: #333;
+}
+
+#form-container .form label::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: -3px;
+    border-bottom: 3px solid rgb(43,137,6);
+
+    left: 0px;
+
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+
+}
+#form-container .content-name{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+
+}
+
+#form-container .form input:focus + .label-name .content-name, .form input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: rgb(43,137,6);
+}
+
+
+#form-container .form input:focus + .label-name::after, .form input:valid + .label-name::after{
+    transform: translateX(0%);
+}
+#form-container h4{
+    /* padding: 0 0 100px 0; */
+    font-family: NordiquePro;
+    text-transform: lowercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: rgb(41,136,4);
+    cursor: pointer;
+    /* align-self: center; */
+}
+#form-container h4 span{
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 3px;
+    transition: 0.5s ease-out;
+    font-family: fantasy;
+}
+textarea{
+    /* margin: 10% 0; */
+    /* width: 80%; */
+    margin: 8% 0;
+    height: 100px;
+    /* border-radius: 10px; */
+    border: 2px solid #868fcd;
+    outline:none;
+}
+textarea input {
+    margin: 10px;
+}
+/*****/
+
+
+
+@media screen and (min-width: 1024px) {
+    .slide{
+        display: grid;
+        grid-template-columns: 8% 1fr 10% 1fr 10%;
+        grid-template-rows: 10% 1fr minmax(200px, 396px) 1fr 10%;
+    }
+    .slide.one h2{
+        font-size: 40px;
+    }
+    #info-container p{
+        font-size: 40px;
+    }
+    .article.collections{
+        white-space: nowrap;
+        grid-column: 2;
+        grid-row: 3/4;
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: space-around; */
+        padding:0;
+    }
+    .art_img_wrapper{
+        grid-column: 4;
+        grid-row: 3/4;
+        align-items: center;
+        /* justify-content: center; */
+        padding: 0;
+    }
+    .watercolor_background{
+        grid-column:3/6;
+        grid-row:1/6;
+    }
+    .bottles{
+        display: block;
+        width: 85%;
+        bottom: -20%;
+        left: -35%;
+    }
+
+    .article p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (min-width: 1328px) {
+    .slide.one h2{
+        font-size: 45px;
+    }
+}
+
+
+
+
+
