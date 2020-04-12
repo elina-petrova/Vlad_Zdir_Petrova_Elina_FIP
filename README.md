@@ -17,3 +17,5 @@ A browser of your preferences.
 
 ## Licence 
 All rights reserved. April 2020
+
+![Heineken Logo](https://github.com/elina-petrova/Vladyslav_Zdir_Petrova_Elina_FIP/blob/master/img/logo.png)
