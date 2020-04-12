@@ -1,0 +1,357 @@
+/*Utility Class*/
+
+.hide
+{
+    display: none;
+}
+
+/* General rules - scales images, videos to size of container */
+img, embed, object, video {
+  /* max-height: 100%; */
+  max-width: 100%;
+  }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/*Fix for scaling of images IE*/
+img {
+  -ms-interpolation-mode: bicubic; }
+
+
+/*General Rules for Elements*/
+
+body
+{
+    font-family: 'Futura Std', Helvetica, Arial, sans-serif;
+    background-color: #F6F6F6;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.nana{
+    background: #F6F6F6;
+    z-index: 2222;
+    width: 100%;
+    height: 100%;
+}
+a 
+{ 
+  color:#000; 
+  text-decoration: none; 
+  outline:0; 
+  transition:all .1s linear 0s;
+}
+
+h2, h3
+{
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #1B3116;
+    font-weight: bolder;
+}
+
+p{
+    font-family: 'Gotu', Helvetica, Arial, sans-serif;
+    color: #6A819B;
+    font-size: 16px;
+}
+
+.text_block_one span{
+  font-weight: bolder;
+  font-size: 5em;
+  margin-left: -8px;
+  /* margin-top: 40px; */
+}
+.button a{
+    font-family: Segoe Script, 'Gotu', serif;
+    color: red;
+    font-size: 20px;
+}
+.article.collections p{
+  font-family: Forte, Segoe Script, 'Gotu', serif;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+
+.slide{
+    background: #F6F6F6;
+}
+/* MENU LOGO AND PAGE COUNTER */
+#fixedStructure{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 3% auto 3%;
+    grid-template-rows: 5% auto 5%;
+
+    z-index:9999;
+    position: absolute;
+    pointer-events: none;
+    top:0;
+    left: 0;
+}
+
+#Logo{
+  grid-column:2;
+  grid-row:2;
+  align-self:end;
+  justify-self: end;
+  font-family: Futura;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#menu{
+  grid-column:2;
+  grid-row:2;
+}
+
+/*PAGE COUNTER*/
+
+
+.text_block{
+  grid-row: 6/7;
+  grid-column: 2/5;
+}
+
+
+
+/*MOBILE SLIDE*/
+.slide{
+    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows:
+
+    2%  auto 2% auto minmax(100px, 500px) 
+    repeat(2, auto) minmax(100px, 500px) 
+    repeat(2, auto) minmax(100px, 500px) 
+    auto 2% 2%;
+
+    grid-row-gap: 20px;
+}
+.text_block p{
+  font-size: 20px;
+  line-height: 30px;
+}
+.text_block_one{
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .art_img_wrapper{
+    grid-column:2;
+    grid-row:5/6;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+  .text_block_two{
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+  .text_block_three{
+    grid-column: 2/3;
+    grid-row: 7/8;
+  }
+  .image_two{
+  overflow: h;
+  background-blend-mode: overlay;
+  grid-column:2;
+  grid-row:8/9;
+  background-size: cover;
+  overflow: hidden;
+}
+  .text_block_four{
+    grid-column: 2/3;
+    grid-row: 9/10;
+  }
+  .text_block_five{
+    grid-column: 2/3;
+    grid-row: 10/11;
+  }
+  .image_three{
+  grid-column:2;
+  grid-row:11/12;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+  .text_block_six{
+    grid-column: 2/3;
+    grid-row: 12/13;
+  }
+  .button{
+    grid-column: 2/3;
+    grid-row: 14/15;
+  }
+img{
+  object-fit: cover;
+}
+.watercolor_background{
+    grid-column:2;
+    grid-row:1/5;
+    background: url("../img/splash.png");
+    background-position: center;
+    background-size: cover;
+}
+.bottles{
+    display: none;
+    position: absolute;
+}
+.article{
+    grid-column:2;
+    grid-row:2/3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+    z-index: 999;
+}
+.article.collections h2{
+    /* text-transform: uppercase; */
+    /* letter-spacing: 3px; */
+    /* font-size: 60px; */
+}
+.article p{
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.location{
+    padding: 5% 0;
+}
+
+.article.locations p:first-child{
+    font-family: Forte;
+    font-size: 28px;
+}
+h2.heading{
+    display: none;
+}
+
+.ghosted{
+  font-family: 'OpenSans', Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  /* grid-column: 2; */
+  /* grid-row: 2; */
+  /* display: inline-block; */
+  opacity: 0.05;
+  letter-spacing: 10px;
+  color: black;
+  text-transform: uppercase;
+}
+@media screen and(min-width: 728px){
+}
+
+@media screen and (min-width: 1300px) {
+  .ghosted{
+    font-size: 170px;
+    /* grid-column: 2/10; */
+  }
+  .image_two, .image_three{
+    display: none;
+  }
+  .button{
+    grid-column: 3/4;grid-row: 6;text-align: center;padding-top: 20%;
+  }
+  .text_block_one{
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .text_block_two{
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .text_block_three{
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+  .text_block_four{
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+  .text_block_five{
+    grid-column: 3/4;
+    grid-row: 5/6;
+  }
+  .text_block_six{
+    grid-column: 4/5;
+    grid-row: 5/6;
+  }
+    .slide{
+        display: grid;
+        grid-template-columns: 15% minmax(250px,400px) minmax(250px,400px) minmax(250px,400px)15%;
+        grid-template-rows: 5% minmax(100px, 400px) auto  minmax(100px, 700px) 1fr 10%;
+        grid-row-gap: 50px;
+        grid-column-gap: 20px;
+    }
+    .slide.two, .slide.three h2{
+        font-size: 35px;
+    }
+    .article.collections p{
+      font-size: 40px;
+    }
+    .article{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 90px 0;
+    }
+    .article.collections, .article.locations{
+        grid-column: 1/9;
+        grid-row: 2/3;
+        text-align: center;
+    }
+    .article.about{
+        grid-column: 4;
+        grid-row: 3/4 ;
+    }
+    .article.locations{
+        padding: 110px 60px 0px 60px;
+    }
+    .two .art_img_wrapper, .four .art_img_wrapper{
+        grid-column: 2/5;
+        grid-row: 4/5;
+    }
+    .three .art_img_wrapper{
+        grid-column: 2;
+        grid-row: 3/4 ;
+    }
+    .two .watercolor_background, .four .watercolor_background{
+        grid-column:3/6;
+        grid-row:1/6;
+    }
+    .three .watercolor_background{
+        grid-column:1/4;
+        grid-row:1/6;
+    }
+    .bottles{
+        display: block;
+        width: 85%;
+        bottom: -20%;
+        left: -35%;
+    }
+
+    p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+}
+
+
+
+
+
