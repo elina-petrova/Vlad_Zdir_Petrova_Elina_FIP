@@ -1,0 +1,101 @@
+
+/*Fonts*/
+@font-face {
+font-family: 'Futura Std';
+src: url('../fonts/Futura Std Extra Bold.ttf');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Gotu';
+src: url('../fonts/Gotu-Regular.ttf');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'OpenSans';
+src: url('../fonts/OpenSans-Bold.ttf');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Forte';
+src: url('../fonts/FORTE.TTF');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Segoe Script';
+src: url('../fonts/segoesc.ttf');
+font-weight: normal;
+font-style: normal;
+}
+
+#menu{
+  z-index: 99999999;
+  position: absolute;
+  margin: 5% 5%;
+  cursor: pointer;
+}
+.menu nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0F2971;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  color: #8F8F78;
+  align-content:center;
+  transition: all 2s 0.3s;
+  padding: 50px;
+
+  transform: translateY(-100vh);
+}
+.menu nav ul{
+  align-self:center;
+  justify-self:center;
+  margin: auto;
+}
+nav.opened-menu{
+  transition: all 1s;
+  transform: translateY(0);
+  z-index: 9999999;
+}
+.menu nav ul li{
+  text-align: center;
+  font-family: 'OpenSans', Poppins, Roboto, sans-serif;
+  font-size: 30px;
+  letter-spacing: 3px;
+  padding: 10px;
+}
+.menu nav ul li a{
+  color: #FFAF38;
+}
+.menu nav ul li a:hover{
+  color: #FEFEFE;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu nav{
+    width: 40vw;
+    height: 100vh;
+    transform: translateX(-40vw);
+  }
+  .menu nav ul li{
+    font-size: 40px;
+    margin: 0.5em;
+  }
+  nav.opened-menu{
+    transition: all 1s;
+    transform: translateX(0);
+  }
+}
+.button a:hover{
+  color: blue;
+}
