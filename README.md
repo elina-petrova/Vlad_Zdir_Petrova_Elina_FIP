@@ -2,7 +2,7 @@
 
 # Heineken
 
-/*Welcome to our website! On the website we would like to introduce you to the new product line of Heineken company. Find out what the foaming beer is, explore our beer collections and engage in our social campaings! */
+/*Welcome to our website! On the website we would like to introduce you to the new product line of Heineken company. Find out what the foaming beer is, explore our beer collections and engage in our social campaings!*/
 
 
 ## About 
